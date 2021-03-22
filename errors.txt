@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/resources.rpy", line 3: expected statement.
+    ﻿define me = Character("Я", color="#0000ab")
+               ^
+
+Ren'Py Version: Ren'Py 7.4.3.1414
+Mon Mar 22 11:31:30 2021
