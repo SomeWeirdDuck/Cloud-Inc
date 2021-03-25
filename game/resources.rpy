@@ -2,11 +2,11 @@ init 1:
 
 #BG
 
-    image test = "images/windows.jpg"
-    image hata = "images/kvartira.jpg"
-    image street = "images/ylica.png"
-    image black_screen = "images/black.jpg"
-    image Cloud_Building = "images/vorota.jpg"
+    image test = "images/bg/windows.jpg"
+    image hata = "images/bg/kvartira.jpg"
+    image street = "images/bg/ylica.png"
+    image black_screen = "images/bg/black.jpg"
+    image Cloud_Building = "images/bg/vorota.jpg"
 
 #CG
 
@@ -14,12 +14,12 @@ init 1:
 
 #Logo
 
-    image limon_logo = "images/Limon_Production_Promo.png"
-    image gus_logo = "images/Gus_Entertainment_Promo.png"
+    image limon_logo = "images/bg/Limon_Production_Promo.png"
+    image gus_logo = "images/bg/Gus_Entertainment_Promo.png"
 
 #Sprites
 
-    image kid1_crying = "images/kid1_crying.png"
+    image kid1_crying = "images/sprites/kid1_crying.png"
 
 #Characters
 
