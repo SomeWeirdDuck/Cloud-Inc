@@ -2,9 +2,14 @@
 errors listed below, and try again.
 
 
-File "game/resources.rpy", line 3: expected statement.
-    ﻿define me = Character("Я", color="#0000ab")
-               ^
+File "game/resources.rpy", line 1: init statement expects a non-empty block.
+    init 1:
+           ^
+
+File "game/resources.rpy", line 9: invalid syntax
+    image test = "images/bg/windows.jpg"
+              ^
+    
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Mon Mar 22 11:31:30 2021
+Fri Mar 26 12:07:17 2021

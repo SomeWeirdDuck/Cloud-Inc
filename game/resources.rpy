@@ -1,5 +1,7 @@
 init 1:
 
+
+
 #BG
 
     image test = "images/bg/windows.jpg"
@@ -24,8 +26,12 @@ init 1:
 
 #Characters
 
-    define me = Character("Я", color="#0000ab")
+    define me = Character("[user_name]Ъ", color="#0000ab")
     define mom = Character("Мацъ", color="#00ff00")
-    define kid1 = Character("Мальчик", color="#7f7f00")
+    define kid1 = Character("Мальчикъ", color="#7f7f00")
 
 #Music
+
+init python:
+    import os
+    user_name = os.environ.get("USERNAME")
