@@ -3,6 +3,7 @@ init 1:
 #BG
 
     image test = "images/bg/windows.jpg"
+    image clouds = "images/bg/clouds2.jpg"
     image hata = "images/bg/kvartira.jpg"
     image street = "images/bg/ylica.png"
     image black_screen = "images/bg/black.jpg"
