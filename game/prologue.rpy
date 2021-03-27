@@ -5,6 +5,18 @@ label prologue:
 
     scene clouds
 
+    python:
+        user_name = renpy.input("Введите имя персонажа: ")
+        user_name = user_name.strip()
+        if not user_name:
+            import os
+            user_name = os.environ.get("USERNAME")
+
+    scene black
+    with dissolve
+    scene clouds
+    with dissolve
+
     "Облака плывут так медленно, удивительно..."
     "Уже не помню, когда я последний раз на них смотрел."
     "Одно похоже на якорь, другое на кошку, третее..."

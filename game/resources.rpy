@@ -36,6 +36,3 @@ init 1:
 
 
 #Some python
-init python:
-    import os
-    user_name = os.environ.get("USERNAME")

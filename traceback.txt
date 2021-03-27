@@ -1,26 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/prologue.rpy", line 138, in script
-    $ set_mode_adv()
-  File "game/prologue.rpy", line 138, in <module>
-    $ set_mode_adv()
-NameError: name 'set_mode_adv' is not defined
+  File "game/prologue.rpy", line 8, in script
+    init python:
+  File "game/prologue.rpy", line 8, in script
+    init python:
+  File "game/prologue.rpy", line 9, in <module>
+    user_name = renpy.input("Введите имя персонажа: ")
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was 
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/prologue.rpy", line 138, in script
-    $ set_mode_adv()
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 515, in main
+    renpy.game.context().run(node)
+  File "game/prologue.rpy", line 8, in script
+    init python:
+  File "game/prologue.rpy", line 8, in script
+    init python:
   File "renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/prologue.rpy", line 138, in <module>
-    $ set_mode_adv()
-NameError: name 'set_mode_adv' is not defined
+  File "game/prologue.rpy", line 9, in <module>
+    user_name = renpy.input("Введите имя персонажа: ")
+  File "renpy/exports.py", line 913, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "renpy/ui.py", line 292, in interact
+    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was " + ('\n'.join([str(item) for item in stack])))
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was 
 
 Windows-10-10.0.18362
 Ren'Py 7.4.3.1414
 Cloud Inc. Alpha 0.1.2
-Sat Mar 27 12:26:28 2021
+Sat Mar 27 13:17:09 2021
