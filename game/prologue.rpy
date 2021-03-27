@@ -1,8 +1,6 @@
 init:
     $ prologue = 0
 
-#define narrator = nvl_narrator
-define n = Character(None, kind=nvl)
 label prologue:
 
     scene clouds
