@@ -174,7 +174,9 @@ init python:
     ## For example, "*.txt" matches txt files in the base directory, "game/
     ## **.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
-
+    config.window_hide_transition = dissolve
+    config.window_show_transition = dissolve
+    ## config.empty_window = nvl_show_core
     ## Classify files as None to exclude them from the built distributions.
 
     build.classify('**~', None)

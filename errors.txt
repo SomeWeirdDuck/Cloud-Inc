@@ -2,14 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/resources.rpy", line 1: init statement expects a non-empty block.
-    init 1:
-           ^
-
-File "game/resources.rpy", line 9: invalid syntax
-    image test = "images/bg/windows.jpg"
-              ^
-    
+File "game/prologue.rpy", line 5: invalid syntax
+    Character(None, kind=nvl,, what_prefix="Sylvie: \"", what_suffix="\"")
+                              ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Fri Mar 26 12:07:17 2021
+Sat Mar 27 11:59:50 2021

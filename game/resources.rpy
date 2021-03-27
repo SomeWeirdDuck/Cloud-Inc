@@ -32,6 +32,9 @@ init 1:
 
 #Music
 
+
+
+#Some python
 init python:
     import os
     user_name = os.environ.get("USERNAME")
