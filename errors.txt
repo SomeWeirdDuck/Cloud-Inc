@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/resources.rpy", line 39: python block expects a non-empty block.
-    init python:
-                ^
+File "game/prologue.rpy", line 345: expected statement.
+    nvl_clear
+             ^
+
+File "game/prologue.rpy", line 354: expected statement.
+    nvl_clear
+             ^
+
+File "game/prologue.rpy", line 364: expected statement.
+    nvl_clear
+             ^
 
 Ren'Py Version: Ren'Py 7.4.3.1414
-Sat Mar 27 13:15:58 2021
+Fri Apr  2 13:22:53 2021

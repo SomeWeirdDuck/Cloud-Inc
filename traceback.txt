@@ -1,40 +1,94 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/prologue.rpy", line 8, in script
-    init python:
-  File "game/prologue.rpy", line 8, in script
-    init python:
-  File "game/prologue.rpy", line 9, in <module>
-    user_name = renpy.input("Введите имя персонажа: ")
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was 
+While processing text tag {w]} in u'\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0442\u0435\u0431\u0435\u2026 {w]}\u0418 \u0443\u0434\u0430\u0447\u0438 \u0432 Cloud Inc.'.:
+  File "game/prologue.rpy", line 345, in script
+    n "Спасибо тебе… {w]}И удачи в Cloud Inc."
+  File "game/prologue.rpy", line 345, in script
+    n "Спасибо тебе… {w]}И удачи в Cloud Inc."
+  File "renpy/common/00nvl_mode.rpy", line 381, in do_display
+    **display_args)
+Exception: Unknown text tag u'w]'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/bootstrap.py", line 326, in bootstrap
     renpy.main.main()
-  File "renpy/main.py", line 515, in main
-    renpy.game.context().run(node)
-  File "game/prologue.rpy", line 8, in script
-    init python:
-  File "game/prologue.rpy", line 8, in script
-    init python:
-  File "renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/prologue.rpy", line 9, in <module>
-    user_name = renpy.input("Введите имя персонажа: ")
-  File "renpy/exports.py", line 913, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "renpy/ui.py", line 292, in interact
-    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was " + ('\n'.join([str(item) for item in stack])))
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was 
+  File "renpy/main.py", line 617, in main
+    run(restart)
+  File "renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "game/prologue.rpy", line 345, in script
+    n "Спасибо тебе… {w]}И удачи в Cloud Inc."
+  File "game/prologue.rpy", line 345, in script
+    n "Спасибо тебе… {w]}И удачи в Cloud Inc."
+  File "renpy/ast.py", line 715, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1393, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1205, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/common/00nvl_mode.rpy", line 381, in do_display
+    **display_args)
+  File "renpy/character.py", line 621, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3101, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3611, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "renpy/display/core.py", line 2441, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 777, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 777, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 777, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/screen.py", line 681, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 777, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1184, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 980, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1184, in render
+    st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/display/layout.py", line 777, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 263, in renpy.display.render.render
+  File "renpy/text/text.py", line 2034, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "renpy/text/text.py", line 607, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "renpy/text/text.py", line 1218, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag u'w]'
 
 Windows-10-10.0.18362
 Ren'Py 7.4.3.1414
-Cloud Inc. Alpha 0.1.2
-Sat Mar 27 13:17:09 2021
+Cloud Inc. Alpha_0.1.2
+Fri Apr  2 13:30:42 2021

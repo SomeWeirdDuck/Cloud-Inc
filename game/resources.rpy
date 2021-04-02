@@ -30,9 +30,17 @@ init 1:
     define mom = Character("Мацъ", color="#00ff00")
     define kid1 = Character("Мальчикъ", color="#7f7f00")
     define n = Character(None, kind=nvl)
+    define op = Character("ОператорЪ", color="#a1e6f1")
+    define rab = Character("РаботникЪ", color="#ba0000")
+    define ht = Character("Хоси", color="#da67a3")
 
 #Music
 
+    $ knock = "audio/fx/knock.mp3"
+    $ nyaa = "audio/fx/nyaa.mp3"
+    $ unravel = "audio/fx/unravel.mp3"
+    $ m_nya = "audio/fx/man_nya.mp3"
+    $ negr = "audio/fx/sad_negro.mp3"
 
 
 #Some python
