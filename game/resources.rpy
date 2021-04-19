@@ -28,7 +28,7 @@ init 1:
 
     define me = Character("[user_name]Ъ", color="#0000ab")
     define mom = Character("Мацъ", color="#00ff00")
-    define kid1 = Character("Мальчикъ", color="#7f7f00")
+    define kid1 = Character("илил ишшишлиш", color="#7f7f00")
     define n = Character(None, kind=nvl)
     define op = Character("ОператорЪ", color="#a1e6f1")
     define rab = Character("РаботникЪ", color="#ba0000")
