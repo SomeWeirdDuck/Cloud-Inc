@@ -1,7 +1,6 @@
 init 1:
 
 
-
 #BG
 
     image test = "images/bg/windows.jpg"
@@ -25,8 +24,11 @@ init 1:
     image kid1_crying = "images/sprites/kid1_crying.png"
 
 #Characters
-
-    define me = Character("[user_name]Ъ", color="#0000ab")
+    python:
+        import os
+        import pwd
+        my_user = pwd.getpwuid(os.getuid()).pw_name + "Ъ"
+    define me = Character(my_user, color="#0000ab")
     define mom = Character("Мацъ", color="#00ff00")
     define kid1 = Character("илил ишшишлиш", color="#7f7f00")
     define n = Character(None, kind=nvl)

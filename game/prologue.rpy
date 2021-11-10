@@ -8,9 +8,9 @@ label prologue:
     python:
         user_name = renpy.input("Введите имя персонажа: ")
         user_name = user_name.strip()
+        me = user_name + "Ъ"
         if not user_name:
-            import os
-            user_name = os.environ.get("USERNAME")
+            pass
 
     scene black
     with dissolve
