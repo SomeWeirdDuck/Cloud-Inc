@@ -4,3 +4,4 @@ log.txt
 errors.txt
 files.txt
 **/cache
+*.rpyc
