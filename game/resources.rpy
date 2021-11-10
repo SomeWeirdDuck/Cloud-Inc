@@ -30,7 +30,7 @@ init 1:
         import pwd
         my_user = pwd.getpwuid(os.getuid()).pw_name + "Ъ"
     define me = Character(my_user, color="#0000ab")
-    define mom = Character("Мацъ", color="#00ff00")
+    define mom = Character("МацЪ", color="#00ff00")
     define kid1 = Character("илил ишшишлиш", color="#7f7f00", font="fonts/BirchCtt.ttf")
     define n = Character(None, kind=nvl)
     define op = Character("ОператорЪ", color="#a1e6f1")
