@@ -7,7 +7,7 @@ label prologue:
 
     python:
         user_name = renpy.input("Введите имя персонажа: ")
-        if not user_name:
+        if user_name == '':
             pass
         else:
             user_name = user_name.strip()
@@ -232,6 +232,8 @@ label give:
     with dissolve
 
     "Двери лифта распахнулись."
+    
+    jump posilka 
 
 label open:
 
@@ -242,6 +244,7 @@ label open:
     "Не став долго его разглядывать, я сбросил маячок с окна. Неужели кто-то реально его словит?"
     "Я заклеил обратно коробку и отправился на 274.2."
 
+    jump posilka
 
 label posilka:
 
@@ -262,9 +265,9 @@ label posilka:
     window hide
     $ renpy.pause(0.5)
     menu:
-        "Передать на 274.2":
+        "Пожалуй, нет. Извини.": 
             jump busy
-        "Вскрыть":
+        "Да, с радостью!":
             jump date
 
 label busy:
