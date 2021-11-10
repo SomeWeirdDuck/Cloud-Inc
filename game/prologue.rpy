@@ -7,10 +7,11 @@ label prologue:
 
     python:
         user_name = renpy.input("Введите имя персонажа: ")
-        user_name = user_name.strip()
-        me = user_name + "Ъ"
         if not user_name:
             pass
+        else:
+            user_name = user_name.strip()
+            me = user_name + "Ъ"
 
     scene black
     with dissolve
@@ -105,6 +106,10 @@ label office_entrance:
     "Офис Cloud inc., наконец-то я здесь!"
     "Такой красивый белый фасад... И эта надпись, ухх!"
     "Но не время его осматривать, я побежал к входным дверям, которые сами, словно ждали меня, распахнулись."
+
+    scene office
+    with dissolve
+
     "А там, внутри... Удобные мягкие диванчики, несколько лифтов, куча дверей и, конечно, оператор."
     op "Здравствуйте, я приветствую вас в Cloud.inc. Спасибо, что выбрали именно нас!"
     op "Ваш личный кабинет находится на 273-ем этаже."
