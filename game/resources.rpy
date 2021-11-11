@@ -34,7 +34,15 @@ init 1:
 #Sprites
 
     image kid1_crying = "images/sprites/kid1_crying.png"
-    image hosy = "images/sprites/waifu.png"
+    image hosy_smiling = "images/sprites/ХосиЪ/hosy_smiling.png"
+    image hosy_confused = "images/sprites/ХосиЪ/hosy_confused.png"
+    image hosy_excited = "images/sprites/ХосиЪ/hosy_excited.png"
+    image hosy_happy = "images/sprites/ХосиЪ/hosy_happy.png"
+    image hosy_sad = "images/sprites/ХосиЪ/hosy_sad.png"
+    image oper_calm_1 = "images/sprites/ОператорЪ/Calm_1.png"
+    image oper_calm_2 = "images/sprites/ОператорЪ/Calm_2.png"
+    image oper_evill_1 = "images/sprites/ОператорЪ/evill_1.png"
+    image oper_evill_2 = "images/sprites/ОператорЪ/evill_2.png"
 
 #Characters
     python:

@@ -115,13 +115,27 @@ label office_entrance:
     with dissolve
 
     "А там, внутри... Удобные мягкие диванчики, несколько лифтов, куча дверей и, конечно, оператор."
+
+    show oper_calm_1
+    with dissolve
+
     op "Здравствуйте, я приветствую вас в Cloud.inc. Спасибо, что выбрали именно нас!"
     op "Ваш личный кабинет находится на 273-ем этаже."
     me "..."
     op "Что-то не так?"
     me "А собеседование? Подача доку-"
+
+    hide oper_calm_1
+    with dissolve
+    show oper_evill_1
+    with dissolve
+
     op "Кхм... 273-ий этаж."
     me "..."
+
+    hide oper_evill_1
+    with dissolve
+
     "Как же... Что за?!"
     "Тут столько этажей?! О боже, нервы."
     "Та-ак, лифт."
@@ -202,9 +216,7 @@ label office_entrance:
     "Передо мной те же 3 двери, что и на моем этаже, но теперь на них написано «274.1», «274.2» и «274.3». Я снова иду к центральной."
     "После короткого стука мне открывает девушка. По виду моя ровесница."
 
-    show hosy:
-        ypos 200
-        xalign 0.5
+    show hosy_smiling
     with dissolve
 
     me "Здрасте, вот посылка, её надо…"
@@ -214,7 +226,7 @@ label office_entrance:
     me "Д-да… Наверно… Хах?"
     ht "Ладно, новичок, еще увидимся."
 
-    hide hosy
+    hide hosy_smiling
     with dissolve
 
     me "Пока… Хоси."
@@ -291,9 +303,7 @@ label open:
 
 label posilka:
 
-    show hosy:
-        ypos 200
-        xalign 0.5
+    show hosy_smiling
     with dissolve
 
     ht "И снова привет!"
@@ -320,11 +330,16 @@ label posilka:
 
 label busy:
 
+    hide hosy_smiling
+    with dissolve
+    show hosy_sad
+    with dissolve
+
     me "У меня другие планы."
     ht "Ничего, я понимаю, первый день. Тогда удачи тебе!"
     me "Спасибо."
 
-    hide hosy
+    hide hosy_sad
     with dissolve
 
     scene kab_evening 
@@ -377,11 +392,16 @@ label date:
 
     $ prolog += 1
 
+    hide hosy_smiling
+    with dissolve
+    show hosy_happy
+    with dissolve
+
     me "Д-да... с радостью!"
     ht "Отлично! Тогда, после смены, я к тебе приду."
     me "Хорошо."
 
-    hide hosy
+    hide hosy_happy
     with dissolve
 
     "Обалдеть. В первый же день я буду ужинать с милой девушкой. "
@@ -401,24 +421,34 @@ label date:
 
     "Кажется, это она."
 
-    show hosy:
-        ypos 200
-        xalign 0.5
+    show hosy_confused
     with dissolve
 
     ht "Привет~!"
     "Она… завораживает."
     me "..Проходи."
+
+    hide hosy_confused
+    with dissolve
+    show hosy_happy
+    with dissolve
+
     ht "Ты так уютно устроился, молодец!"
     me "Спасибо."
     "Мы сели за стол и принялись наедаться рисовыми шариками."
     "Мы болтали об учебе, о доме, о родных, обсуждали забавные истории из жизни."
     ht "Ты знаешь, по сравнению с прошлым работником 273.2, ты лучший!"
     me "Правда?"
+
+    hide hosy_happy
+    with dissolve
+    show hosy_excited       #Тут нужен арт с закрытыми глазами!!!
+    with dissolve
+
     "Хоси закрыла глаза, её лицо стало ко мне приближаться, а губы приоткрылись. "
     "Мы ведь с ней только познакомились, неужели в первый же день?"
 
-    hide hosy
+    hide hosy_excited
     with dissolve
     scene black
     with dissolve
@@ -426,10 +456,6 @@ label date:
     "Я закрыл глаза. Этот поцелуй был несравним с моими школьными романами."
 
     scene kab_night
-    show hosy:
-        ypos 200
-        xalign 0.5
-    with dissolve
     $renpy.pause(0.4, hard=True)
     hide hosy
     with easeoutleft
