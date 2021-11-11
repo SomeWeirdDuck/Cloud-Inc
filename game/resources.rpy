@@ -1,6 +1,6 @@
 init 1:
-    $ flag_windows = false
-    $ flag_linux = false
+    $ flag_windows = False
+    $ flag_linux = False
 
 #BG
 
