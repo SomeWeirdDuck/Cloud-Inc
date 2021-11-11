@@ -202,7 +202,9 @@ label office_entrance:
     "Передо мной те же 3 двери, что и на моем этаже, но теперь на них написано «274.1», «274.2» и «274.3». Я снова иду к центральной."
     "После короткого стука мне открывает девушка. По виду моя ровесница."
 
-    show hosy
+    show hosy:
+        ypos 200
+        xalign 0.5
     with dissolve
 
     me "Здрасте, вот посылка, её надо…"
@@ -289,7 +291,9 @@ label open:
 
 label posilka:
 
-    show hosy
+    show hosy:
+        ypos 200
+        xalign 0.5
     with dissolve
 
     ht "И снова привет!"
@@ -395,7 +399,9 @@ label date:
 
     "Кажется, это она."
 
-    show hosy
+    show hosy:
+        ypos 200
+        xalign 0.5
     with dissolve
 
     ht "Привет~!"
@@ -418,10 +424,11 @@ label date:
     "Я закрыл глаза. Этот поцелуй был несравним с моими школьными романами."
 
     scene kab_night
+    show hosy:
+        ypos 200
+        xalign 0.5
     with dissolve
-    show hosy
-    with dissolve
-    $renpy.pause(0.7)
+    $renpy.pause(0.4)
     hide hosy
     with easeoutleft
 
@@ -435,7 +442,15 @@ label date:
 
     "Среди ночи я резко встал."
     "Я, наверно, виноват перед Хоси. Надо хотя бы извиниться…"
+
+    scene d_274
+    with dissolve
+
     "Я поднялся к ней, открыл дверь, но она…"
+
+    scene dead
+    with dissolve
+
     "{cps=8.5}Она… пов… повесилась…{/cps}"
     play sound negr
 

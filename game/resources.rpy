@@ -1,5 +1,5 @@
 init 1:
-
+    $my_user = ""
 
 #BG
 
@@ -22,8 +22,8 @@ init 1:
     image kab_night = "images/bg/cabinet_night.png"
 
 #CG
-
-
+    
+    image dead = "images/cg/cabinet_evening_dead.png"
 
 #Logo
 
@@ -38,15 +38,18 @@ init 1:
 #Characters
     python:
         import os
-        import pwd
-        my_user = pwd.getpwuid(os.getuid()).pw_name + "Ъ"
+        if renpy.windows:
+            my_user = os.environ.get( "USERNAME" ) + "Ъ"
+        elif renpy.linux:
+            import pwd
+            my_user = pwd.getpwuid(os.getuid()).pw_name + "Ъ"
     define me = Character(my_user, color="#0000ab")
     define mom = Character("МацЪ", color="#00ff00")
     define kid1 = Character("илил ишшишлиш", color="#7f7f00", font="fonts/BirchCtt.ttf")
     define n = Character(None, kind=nvl)
     define op = Character("ОператорЪ", color="#a1e6f1")
     define rab = Character("РаботникЪ", color="#ba0000")
-    define ht = Character("Хоси", color="#da67a3")
+    define ht = Character("ХосиЪ", color="#da67a3")
 
 #Music
 
