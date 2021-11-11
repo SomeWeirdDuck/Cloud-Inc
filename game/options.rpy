@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "Alpha_0.1.2"
+define config.version = "Alpha_0.2.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -119,7 +119,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 20
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -149,7 +149,7 @@ define config.save_directory = "Cloud_Inc."
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "images/bg/windows.jpg"
 
 
 ## Build configuration #########################################################
