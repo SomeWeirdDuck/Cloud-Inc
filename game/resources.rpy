@@ -1,5 +1,6 @@
 init 1:
-    $my_user = ""
+    $ flag_windows = false
+    $ flag_linux = false
 
 #BG
 
@@ -39,8 +40,10 @@ init 1:
     python:
         import os
         if renpy.windows:
+            flag_windows = True
             my_user = os.environ.get( "USERNAME" ) + "Ъ"
         elif renpy.linux:
+            flag_linux = True
             import pwd
             my_user = pwd.getpwuid(os.getuid()).pw_name + "Ъ"
     define me = Character(my_user, color="#0000ab")
