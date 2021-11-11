@@ -172,7 +172,7 @@ label office_entrance:
 
     window hide
     play sound knock
-    $renpy.pause(0.8)
+    $renpy.pause(0.8, hard=True)
     window show
 
 
@@ -229,7 +229,7 @@ label office_entrance:
 
     window hide
     play sound nyaa
-    $renpy.pause(0.8)
+    $renpy.pause(0.8, hard=True)
     window show
 
     "А? Что это?"
@@ -363,11 +363,13 @@ label busy:
     me "Я звоню в администрацию..!"
     "Не успев закончить свою фразу, я с ужасом стал наблюдать за тем, как работник вылезает в окно."
     rab "Не ту работу ты выбрал, удачи."
+    scene black
+    with dissolve
     play sound unravel
     "Он спрыгнул… {w}{cps=8.5}и полетел вниз…{/cps}"
 
     window hide
-    $renpy.pause(3)
+    $renpy.pause(3, hard=True)
 
     jump ed
 
@@ -394,7 +396,7 @@ label date:
 
     window hide
     play sound knock
-    $renpy.pause(0.8)
+    $renpy.pause(0.8, hard=True)
     window show
 
     "Кажется, это она."
@@ -428,7 +430,7 @@ label date:
         ypos 200
         xalign 0.5
     with dissolve
-    $renpy.pause(0.4)
+    $renpy.pause(0.4, hard=True)
     hide hosy
     with easeoutleft
 
@@ -455,7 +457,7 @@ label date:
     play sound negr
 
     window hide
-    $renpy.pause(10)
+    $renpy.pause(10, hard=True)
 
     jump ed
 
