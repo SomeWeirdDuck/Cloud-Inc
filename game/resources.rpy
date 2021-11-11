@@ -5,11 +5,21 @@ init 1:
 
     image test = "images/bg/windows.jpg"
     image clouds = "images/bg/clouds2.jpg"
+    image clouds2 = "images/bg/clouds.jpg"
     image hata = "images/bg/kvartira.jpg"
     image street = "images/bg/ylica.png"
     image black_screen = "images/bg/black.jpg"
-    image Cloud_Building = "images/bg/vorota.jpg"
+    image Cloud_Building = "images/bg/office_building.jpg"
     image office = "images/bg/office.jpg"
+    image bus = "images/bg/bus.jpg"
+    image elevator = "images/bg/elevator.png"
+    image d_273 = "images/bg/doors_273.jpg"
+    image d_274 = "images/bg/doors_274.jpg"
+    image d_500 = "images/bg/doors_500.jpg"
+    image kab_day = "images/bg/cabinet_day.png"
+    image kab_evening = "images/bg/cabinet_evening.png"
+    image kab_lamp = "images/bg/cabinet_lamp.png"
+    image kab_night = "images/bg/cabinet_night.png"
 
 #CG
 
@@ -23,6 +33,7 @@ init 1:
 #Sprites
 
     image kid1_crying = "images/sprites/kid1_crying.png"
+    image hosy = "images/sprites/waifu.png"
 
 #Characters
     python:
