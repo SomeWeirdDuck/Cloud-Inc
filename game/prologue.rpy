@@ -127,13 +127,13 @@ label office_entrance:
 
     hide oper_calm_1
     with dissolve
-    show oper_evill_1
+    show oper_evil_1
     with dissolve
 
     op "Кхм... 273-ий этаж."
     me "..."
 
-    hide oper_evill_1
+    hide oper_evil_1
     with dissolve
 
     "Как же... Что за?!"
@@ -457,8 +457,10 @@ label date:
     "Я закрыл глаза. Этот поцелуй был несравним с моими школьными романами."
 
     scene kab_night
+    show hosy_excited
+    with dissolve
     $renpy.pause(0.4, hard=True)
-    hide hosy
+    hide hosy_excited
     with easeoutleft
 
     "Но, не успев прочувствовать, Хоси оттолкнула меня и убежала из кабинета на свой этаж."

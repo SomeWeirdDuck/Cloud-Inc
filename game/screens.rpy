@@ -305,7 +305,7 @@ screen navigation():
 
         else:
 
-            textbutton _("продолжить") action ShowMenu("history")
+            textbutton _("Продолжить") action ShowMenu("history")
 
             textbutton _("Сохранить") action ShowMenu("save")
 
@@ -361,18 +361,18 @@ screen main_menu():
         ground "gui/windows.jpg"
         idle "gui/menu1.png"
         hover "gui/menu2.png"
+        alpha False
 
         hotspot(873, 215, 211, 60) action Start()
-        hotspot(854, 306, 205, 55) action Start()
-        hotspot(837, 405, 271, 57) action Start()
-        hotspot(888, 515, 173, 70) action Start()
+        hotspot(854, 306, 245, 55) action ShowMenu("load")
+        hotspot(837, 405, 271, 57) action ShowMenu("preferences")
+        hotspot(888, 515, 173, 70) action Quit()
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
 style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
-
 style main_menu_frame:
     xsize 420
     yfill True
