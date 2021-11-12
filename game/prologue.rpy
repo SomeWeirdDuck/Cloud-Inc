@@ -323,7 +323,7 @@ label posilka:
     window hide
     $ renpy.pause(0.5)
     menu:
-        "Пожалуй, нет. Извини.": 
+        "Пожалуй, нет. Извини.":
             jump busy
         "Да, с радостью!":
             jump date
@@ -335,6 +335,7 @@ label busy:
     show hosy_sad
     with dissolve
 
+    $ renpy.notify("Это повлияет на вашу дальнейшую судьбу.") 
     me "У меня другие планы."
     ht "Ничего, я понимаю, первый день. Тогда удачи тебе!"
     me "Спасибо."

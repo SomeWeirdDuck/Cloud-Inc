@@ -357,28 +357,15 @@ screen main_menu():
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
+    imagemap:
+        ground "gui/windows.jpg"
+        idle "gui/menu1.png"
+        hover "gui/menu2.png"
 
-    add gui.main_menu_background
-
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
-
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
-
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
+        hotspot(873, 215, 211, 60) action Start()
+        hotspot(854, 306, 205, 55) action Start()
+        hotspot(837, 405, 271, 57) action Start()
+        hotspot(888, 515, 173, 70) action Start()
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -744,7 +731,7 @@ screen preferences():
                     textbutton _("После выборов") action Preference("after choices", "toggle")
                     textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
                 vbox:
-                    textbutton _("язык") 
+                    textbutton _("Alpha_0.2.7") 
 
                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
                 ## могут быть добавлены сюда для добавления новых настроек.
